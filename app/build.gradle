@@ -46,5 +46,4 @@ dependencies {
     android.defaultConfig.vectorDrawables.useSupportLibrary = true
     implementation 'com.karumi:dexter:6.2.1'
     implementation 'androidx.cardview:cardview:1.0.0'
-
 }

@@ -94,4 +94,10 @@
 
     </LinearLayout>
 
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/google_sign_in"
+        android:layout_width="144dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center" />
+
 </LinearLayout>
