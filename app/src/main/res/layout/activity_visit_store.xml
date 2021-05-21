@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E8C6ED"
+    android:background="@drawable/ui_design"
     tools:context=".VisitStoreActivity">
 
     <androidx.recyclerview.widget.RecyclerView

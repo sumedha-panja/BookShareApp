@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="5dp"
     android:elevation="4dp"
-    android:backgroundTint="@color/etl"
+    android:backgroundTint="#F2CD6388"
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
@@ -29,7 +29,7 @@
             android:layout_marginEnd="11dp"
             android:layout_marginRight="11dp"
             android:layout_marginBottom="30dp"
-            android:backgroundTint="@color/purple_200"
+            android:backgroundTint="@color/etl"
             android:clickable="true"
             app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
 
@@ -49,6 +49,7 @@
             android:layout_marginEnd="48dp"
             android:layout_marginRight="48dp"
             android:layout_marginBottom="68dp"
+            android:fontFamily="@font/aclonica"
             android:text="Book Name"
             android:textColor="@color/black"
             android:textSize="25sp"
@@ -70,6 +71,7 @@
             android:layout_marginEnd="74dp"
             android:layout_marginRight="74dp"
             android:layout_marginBottom="43dp"
+            android:fontFamily="@font/aclonica"
             android:text="Author's Name"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -90,6 +92,7 @@
             android:layout_marginEnd="124dp"
             android:layout_marginRight="124dp"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/aclonica"
             android:text="Genre"
             android:textColor="@color/black"
             android:textSize="15sp" />

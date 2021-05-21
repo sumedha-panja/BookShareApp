@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E8C6ED"
+    android:background="@drawable/ui_design"
     tools:context=".DashboardActivity">
 
     <TextView
@@ -65,7 +65,7 @@
             android:text="ADD BOOKS"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:backgroundTint="#F4EBEB" />
+            app:backgroundTint="#CD7F99" />
     </LinearLayout>
 
     <LinearLayout
@@ -111,7 +111,7 @@
             android:text="VISIT STORE"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:backgroundTint="#F4EBEB" />
+            app:backgroundTint="#CD7F99" />
     </LinearLayout>
 
     <LinearLayout
@@ -157,7 +157,7 @@
             android:text="LOGOUT"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:backgroundTint="#F4EBEB" />
+            app:backgroundTint="#CD7F99" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -93,10 +93,10 @@ public class MainActivity extends AppCompatActivity {
         String email = emailEt.getText().toString();
         String password = passwordEt.getText().toString();
         if (TextUtils.isEmpty(email)) {
-            emailEt.setError("Enter you email-id");
+            emailEt.setError("Enter your email-id");
             return;
         } else if (TextUtils.isEmpty(password)) {
-            passwordEt.setError("Enter you password");
+            passwordEt.setError("Enter your password");
             return;
         }
 

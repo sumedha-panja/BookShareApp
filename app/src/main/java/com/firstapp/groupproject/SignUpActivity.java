@@ -58,15 +58,15 @@ public class SignUpActivity extends AppCompatActivity {
         String password1=passwordEt1.getText().toString();
         String password2=passwordEt2.getText().toString();
         if(TextUtils.isEmpty(email)){
-            emailEt.setError("Enter you email-id");
+            emailEt.setError("Enter your email-id");
             return;
         }
         else if(TextUtils.isEmpty(password1)){
-            passwordEt1.setError("Enter you password");
+            passwordEt1.setError("Enter your password");
             return;
         }
         else if(TextUtils.isEmpty(password2)){
-            passwordEt2.setError("Confirm you password");
+            passwordEt2.setError("Confirm your password");
             return;
         }
         else if(!password1.equals(password2)){

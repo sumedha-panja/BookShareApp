@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E8C6ED"
+    android:background="@drawable/ui_design"
     tools:context=".AddBookActivity">
 
 
@@ -13,7 +13,7 @@
         android:layout_width="309dp"
         android:layout_height="141dp"
         android:layout_margin="20dp"
-        android:background="@drawable/et_layout"
+        android:background="@drawable/field_layout"
         android:gravity="top"
         android:hint="Description here..."
         android:inputType="textMultiLine"
@@ -31,7 +31,7 @@
         android:layout_width="367dp"
         android:layout_height="62dp"
         android:layout_marginBottom="182dp"
-        android:background="@drawable/et_layout"
+        android:background="@drawable/field_layout"
         android:hint="Enter the name of the book"
         android:inputType="text"
         android:padding="20dp"
@@ -49,7 +49,7 @@
         android:layout_width="366dp"
         android:layout_height="63dp"
         android:layout_marginBottom="444dp"
-        android:background="@drawable/et_layout"
+        android:background="@drawable/field_layout"
         android:hint="Enter the author's name."
         android:inputType="text"
         android:padding="20dp"
@@ -66,7 +66,7 @@
         android:id="@+id/book_pages"
         android:layout_width="369dp"
         android:layout_height="59dp"
-        android:background="@drawable/et_layout"
+        android:background="@drawable/field_layout"
         android:hint="Enter number of pages"
         android:inputType="text"
         android:padding="20dp"
@@ -79,8 +79,9 @@
         app:layout_constraintVertical_bias="0.236" />
 
     <TextView
-        android:layout_width="70dp"
-        android:layout_height="42dp"
+        android:layout_width="95dp"
+        android:layout_height="36dp"
+        android:fontFamily="@font/aclonica"
         android:text="Genre"
         android:textColor="@color/black"
         android:textSize="22sp"
@@ -94,24 +95,25 @@
 
     <EditText
         android:id="@+id/book_genre"
-        android:layout_width="294dp"
-        android:layout_height="53dp"
-        android:background="@drawable/et_layout"
+        android:layout_width="269dp"
+        android:layout_height="48dp"
+        android:background="@drawable/field_layout"
         android:hint=" Type Academic/Non Academic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.345" />
+        app:layout_constraintVertical_bias="0.336" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
         android:text="About the book:"
+        android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="normal"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.064"
@@ -127,17 +129,17 @@
         android:layout_marginLeft="63dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.579"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426"
+        app:layout_constraintVertical_bias="0.415"
         app:srcCompat="@drawable/mic_icon" />
 
     <Button
         android:id="@+id/add"
         android:layout_width="246dp"
         android:layout_height="73dp"
-        android:backgroundTint="#F4EBEB"
+        android:backgroundTint="#CD7F99"
         android:text="ADD BOOK"
         android:textColor="@color/black"
         android:textSize="25sp"
@@ -149,10 +151,11 @@
         app:layout_constraintVertical_bias="0.979" />
 
     <TextView
-        android:layout_width="263dp"
-        android:layout_height="48dp"
+        android:layout_width="372dp"
+        android:layout_height="53dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:fontFamily="@font/aclonica"
         android:text="UPLOAD E-BOOK(PDF)"
         android:textColor="@color/black"
         android:textSize="22sp"
@@ -162,6 +165,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.715" />
+
+    <TextView
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Press Browse Icon to Browse,Cancel Icon to Remove PDF"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.766" />
 
     <ImageView
         android:id="@+id/imagebrowse"
