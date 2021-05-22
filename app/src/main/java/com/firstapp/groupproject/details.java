@@ -31,7 +31,7 @@ public class details extends AppCompatActivity {
         viewpdf = findViewById(R.id.viewpdf);
         btn = findViewById(R.id.back);
 
-
+        //Book details are displayed
         name.setText(getIntent().getStringExtra("uname").toString());
         author.setText(getIntent().getStringExtra("uauthor").toString());
         pages.setText(getIntent().getStringExtra("upages").toString());
@@ -41,17 +41,17 @@ public class details extends AppCompatActivity {
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //to go back to the store
                 startActivity(new Intent(getApplicationContext(),VisitStoreActivity.class));
                 finish();
             }
         });
-        viewpdf.setOnClickListener(new View.OnClickListener() {
+        viewpdf.setOnClickListener(new View.OnClickListener() { //when pdf icon is clicked
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setType("application/pdf");
-                intent.setData(Uri.parse(file_url));
+                intent.setData(Uri.parse(file_url)); //for retrieving the URL from Firestore to download the pdf
                 startActivity(intent);
 
             }

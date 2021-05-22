@@ -40,7 +40,7 @@ public class VisitStoreActivity extends AppCompatActivity {
         recview.setAdapter(adapter);
 
         db = FirebaseFirestore.getInstance();
-        db.collection("Store").get()
+        db.collection("Store").get() //retrieves data stored in the Firestore under collection id 'Store'
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -58,7 +58,7 @@ public class VisitStoreActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
+        //For displaying the menu items
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.sort_menu,menu);
         return true;
@@ -67,7 +67,7 @@ public class VisitStoreActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.asc){
+        if(id == R.id.asc){ //To sort items in the recycler view in the Ascending order of Book Title
             datalist = new ArrayList<>();
             adapter = new myadapter(datalist);
             recview.setAdapter(adapter);
@@ -87,7 +87,7 @@ public class VisitStoreActivity extends AppCompatActivity {
                     });
 
         }
-        if(id == R.id.desc){
+        if(id == R.id.desc){//To sort items in the recycler view in the Descending order of Book Title
             datalist = new ArrayList<>();
             adapter = new myadapter(datalist);
             recview.setAdapter(adapter);
@@ -107,7 +107,7 @@ public class VisitStoreActivity extends AppCompatActivity {
                     });
 
         }
-        if(id == R.id.acad){
+        if(id == R.id.acad){//To show only those books in the recyclerview which are under Academic Genre
             datalist = new ArrayList<>();
             adapter = new myadapter(datalist);
             recview.setAdapter(adapter);
@@ -127,7 +127,7 @@ public class VisitStoreActivity extends AppCompatActivity {
                     });
 
         }
-        if(id == R.id.nonacad){
+        if(id == R.id.nonacad){//To show only those books in the recyclerview which are under Non Academic Genre
             datalist = new ArrayList<>();
             adapter = new myadapter(datalist);
             recview.setAdapter(adapter);

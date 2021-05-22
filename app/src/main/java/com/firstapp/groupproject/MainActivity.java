@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth firebaseauth;
     private com.google.android.gms.common.SignInButton signInButton;
     private GoogleSignInClient mGoogleSignInClient;
-    private String TAG="MainActivity";
     private int RC_SIGN_IN=1;
 
 
@@ -47,18 +46,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        firebaseauth = FirebaseAuth.getInstance();
+        firebaseauth = FirebaseAuth.getInstance(); //Returns instance of class corresponding to FireBaseApp Instance
         signInButton = findViewById(R.id.google_sign_in);
         emailEt = findViewById(R.id.email);
         passwordEt = findViewById(R.id.password);
         SignInButton = findViewById(R.id.login);
-        progressDialog = new ProgressDialog(this);
+        progressDialog = new ProgressDialog(this);   //creates progress dialog
         SignUpTv = findViewById(R.id.signUpTv);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                                                           .requestIdToken(getString(R.string.default_web_client_id))
                                                           .requestEmail()
-                                                           .build();
-        mGoogleSignInClient = GoogleSignIn.getClient(this,gso);
+                                                           .build();  //to configure google sign-in api
+        mGoogleSignInClient = GoogleSignIn.getClient(this,gso); //Entry point of the google sign-in api
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+                //intent takes the user to the signup activity if user not registered
                 startActivity(intent);
                 finish();
 
@@ -92,19 +92,19 @@ public class MainActivity extends AppCompatActivity {
     private void Login() {
         String email = emailEt.getText().toString();
         String password = passwordEt.getText().toString();
-        if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email)) {  //To check if the email field is empty
             emailEt.setError("Enter your email-id");
             return;
-        } else if (TextUtils.isEmpty(password)) {
+        } else if (TextUtils.isEmpty(password)) { //To check if the password field is empty
             passwordEt.setError("Enter your password");
             return;
         }
 
         progressDialog.setMessage("Please Wait..");
         progressDialog.show();
-        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setCanceledOnTouchOutside(false); //the dialog should not be canceled when touched outside the window.
         firebaseauth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this,
-                new OnCompleteListener<AuthResult>() {
+                new OnCompleteListener<AuthResult>() { //checks if the credentials entered is present in Firebase Auth Database
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void signIn(){
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent(); //Gets an Intent to start the Google Sign In flow
         startActivityForResult(signInIntent,RC_SIGN_IN);
     }
 
@@ -132,7 +132,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == RC_SIGN_IN){
+        if(requestCode == RC_SIGN_IN){//The integer request code originally supplied to startActivityForResult() is checked
+           // turn a GoogleSignInAccount present in the result data for the associated Activity started via getSignInInten
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
         }
@@ -142,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
         try{
 
             GoogleSignInAccount acc = completedTask.getResult(ApiException.class);
+            //GoogleSignInAccount holds the basic account information of the signed in Google user.
             FirebaseGoogleAuth(acc);
 
         }catch (ApiException e){
@@ -156,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.setMessage("Please Wait..");
         progressDialog.show();
         progressDialog.setCanceledOnTouchOutside(false);
+        //Try to sign in a user with the given AuthCredential using signInWithCredential
         firebaseauth.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {

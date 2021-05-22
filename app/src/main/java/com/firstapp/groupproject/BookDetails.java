@@ -7,9 +7,11 @@ public class BookDetails {
     private String book_name,book_author,book_pages,book_genre,book_desc,fileurl;
 
     public BookDetails(){
+        //creating default constructor for Firebase FireStore
 
     }
     public BookDetails(String book_name, String book_author, String book_pages, String book_genre, String book_desc,String fileurl){
+        //Parameterized Constructor for the book details fields
         this.book_name=book_name;
         this.book_author=book_author;
         this.book_pages=book_pages;
@@ -17,6 +19,7 @@ public class BookDetails {
         this.book_desc=book_desc;
         this.fileurl=fileurl;
     }
+    //Creating getter and setter methods for all the input fields
     public String getBook_name(){
         return book_name;
     }

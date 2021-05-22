@@ -24,7 +24,7 @@ public class SignUpActivity extends AppCompatActivity {
     private Button SignUpButton;
     private TextView SignInTv;
     private ProgressDialog progressDialog;
-    private FirebaseAuth firebaseauth;
+    private FirebaseAuth firebaseauth; //creating instance of FirebaseAuth
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,14 +36,14 @@ public class SignUpActivity extends AppCompatActivity {
         SignUpButton = findViewById(R.id.register);
         progressDialog = new ProgressDialog(this);
         SignInTv = findViewById(R.id.signInTv);
-        SignUpButton.setOnClickListener(new View.OnClickListener() {
+        SignUpButton.setOnClickListener(new View.OnClickListener() { //When sign up button is clicked
             @Override
             public void onClick(View v) {
                 Register();
 
             }
         });
-        SignInTv.setOnClickListener(new View.OnClickListener() {
+        SignInTv.setOnClickListener(new View.OnClickListener() { //Takes user to the signin activity
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(SignUpActivity.this,MainActivity.class);
@@ -54,36 +54,38 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
     private void Register(){
+        //Takes the email and password entered by the user as input to be stored in FireBaseAuth
         String email=emailEt.getText().toString();
         String password1=passwordEt1.getText().toString();
         String password2=passwordEt2.getText().toString();
-        if(TextUtils.isEmpty(email)){
+        if(TextUtils.isEmpty(email)){//To check if email field is empty
             emailEt.setError("Enter your email-id");
             return;
         }
-        else if(TextUtils.isEmpty(password1)){
+        else if(TextUtils.isEmpty(password1)){ //To check if password field is empty
             passwordEt1.setError("Enter your password");
             return;
         }
-        else if(TextUtils.isEmpty(password2)){
+        else if(TextUtils.isEmpty(password2)){ //To check if the password field is empty
             passwordEt2.setError("Confirm your password");
             return;
         }
-        else if(!password1.equals(password2)){
+        else if(!password1.equals(password2)){ //To check if the two passwords are equal or not
             passwordEt2.setError("Different password");
             return;
         }
-        else if(password1.length()<6){
-            passwordEt2.setError("Length is short(>6)");
+        else if(password1.length()<6){ //To check the password length
+            passwordEt2.setError("Length is short(It should be of atleast 6 characters!)");
             return;
         }
-        else if(!isValidEmail(email)){
+        else if(!isValidEmail(email)){//To check if valid email is entered
             emailEt.setError("Invalid email");
             return;
         }
         progressDialog.setMessage("Please Wait..");
         progressDialog.show();
         progressDialog.setCanceledOnTouchOutside(false);
+        //Register user in FirebaseAuth if credentials entered are as per the instructions
         firebaseauth.createUserWithEmailAndPassword(email,password1).addOnCompleteListener(this,
                 new OnCompleteListener<AuthResult>() {
                     @Override
@@ -104,7 +106,7 @@ public class SignUpActivity extends AppCompatActivity {
                 });
 
     }
-    private Boolean isValidEmail(CharSequence target){
+    private Boolean isValidEmail(CharSequence target){//For checking if valid email is entered or not
         return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
 
     }

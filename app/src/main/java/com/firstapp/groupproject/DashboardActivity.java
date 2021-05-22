@@ -25,7 +25,7 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
         logout=findViewById(R.id.logout);
-        logout.setOnClickListener(new View.OnClickListener() {
+        logout.setOnClickListener(new View.OnClickListener() { //When logout button is clicked
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
@@ -36,7 +36,7 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
         addbook=findViewById(R.id.addbook);
-        addbook.setOnClickListener(new View.OnClickListener() {
+        addbook.setOnClickListener(new View.OnClickListener() { //when Add book button is clicked
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(DashboardActivity.this,AddBookActivity.class);
@@ -45,7 +45,7 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
         visit=findViewById(R.id.visit);
-        visit.setOnClickListener(new View.OnClickListener() {
+        visit.setOnClickListener(new View.OnClickListener() { //when Visit Store Button is Clicked
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(DashboardActivity.this,VisitStoreActivity.class);
@@ -60,6 +60,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        //Showing items in the menu
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu,menu);
@@ -69,7 +70,7 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.menu_about){
+        if(id == R.id.menu_about){//User taken to the activity where app information is provided
             Intent intent = new Intent(DashboardActivity.this,AboutActivity.class);
             startActivity(intent);
         }
