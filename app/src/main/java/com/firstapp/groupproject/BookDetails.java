@@ -11,7 +11,7 @@ public class BookDetails {
 
     }
     public BookDetails(String book_name, String book_author, String book_pages, String book_genre, String book_desc,String fileurl){
-        //Parameterized Constructor for the book details fields
+        //Parameterized Constructor for the book  fields
         this.book_name=book_name;
         this.book_author=book_author;
         this.book_pages=book_pages;
