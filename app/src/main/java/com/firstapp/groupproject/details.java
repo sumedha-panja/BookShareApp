@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class details extends AppCompatActivity {
 
     TextView name,author,pages,genre,desc;
-    Button btn;
+    Button btn; //go back to recycler view
     ImageView viewpdf;
 
     @Override
