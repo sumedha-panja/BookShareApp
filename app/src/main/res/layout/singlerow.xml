@@ -23,20 +23,20 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="339dp"
-            android:layout_marginLeft="339dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="11dp"
-            android:layout_marginRight="11dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginStart="342dp"
+            android:layout_marginLeft="342dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="20dp"
             android:backgroundTint="@color/etl"
             android:clickable="true"
             app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
 
         <TextView
             android:id="@+id/t1"
-            android:layout_width="232dp"
-            android:layout_height="39dp"
+            android:layout_width="277dp"
+            android:layout_height="38dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -46,13 +46,13 @@
             android:layout_marginStart="124dp"
             android:layout_marginLeft="124dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginRight="48dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
             android:layout_marginBottom="68dp"
             android:fontFamily="@font/aclonica"
             android:text="Book Name"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -74,7 +74,7 @@
             android:fontFamily="@font/aclonica"
             android:text="Author's Name"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/t3"
@@ -95,7 +95,7 @@
             android:fontFamily="@font/aclonica"
             android:text="Genre"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="12sp" />
 
         <ImageView
             android:id="@+id/imageView"

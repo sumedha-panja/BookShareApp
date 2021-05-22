@@ -122,7 +122,7 @@
         android:layout_height="144dp"
         android:fontFamily="@font/aclonica"
         android:text="  Book Description"
-        android:maxLines="100"
+        android:maxLines="120"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
