@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/aclonica"
-            android:text="BookShare is a one stop destination for book lovers.
+            android:text="DigiShare is a one stop destination for book lovers.
 Authorized users can select a book from our collection and can read the same at
 free of cost!"
             android:textColor="@color/black"
