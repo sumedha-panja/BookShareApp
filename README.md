@@ -1,5 +1,5 @@
 # DevSoc App Development Project Report
-**PROJECT NAME: Book Sharing App(DigiShare)**
+**PROJECT NAME: Book Sharing App(DigiShare)**<br />
 **LANGUAGE USED FOR CODING**: Java
 **ABOUT DIGISHARE:**
 Digishare has the following features:
