@@ -8,7 +8,7 @@ In(Using firebase authentication).<br />
 ● Add a book feature-(User is expected to enter the book
 description(Book Name,Author,Number of Pages,Genre,Description).<br />
 ● Speech to Text Conversion is made available for entering the Book
-Description so that the user does not have to go through the
+Description (so that the user does not have to go through the
 cumbersome process of typing the entire book description).<br />
 ● E-book in pdf format can be added(Browse from the internal storage
 of your device and upload the same.Cancel option also available if
