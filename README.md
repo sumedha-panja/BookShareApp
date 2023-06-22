@@ -27,7 +27,6 @@ another activity.<br />
 ● On clicking the pdf icon a downloadable pdf version of the E-book is
 stored in your device.<br />
 
-**WHAT WE LEARNT IN THIS PROJECT:**<br />
 Through this project we learnt to make use of Firebase/Firestore and
 Recycler View. We incorporated a Google Sign-In option which used
 Firebase Authentication. There is an option of Signing In/Signing Up via
