@@ -44,16 +44,3 @@ download options too.<br />
 We learnt a lot in the past 2 weeks through debugging, browsing loads of
 online resources and helping each other sort out errors, and indeed it was
 an enriching experience .<br />
-
-**CONTRIBUTIONS**:<br />
-Lavkush Sharma: Created dynamic list using the recycler view for the
-application. Designed the interface used in the application.<br />
-Niharika Sathish: As an alternative to Sign In using email+password,
-implemented the direct Google Sign in feature using Firebase
-Authentication, with a Google API Console Project. Ideated App names.<br />
-Sumedha Panja: Implemented the Sign In/Sign Up Option using
-email+password using Firebase authentication.Also implemented the
-adding book feature,Speech to Text Conversion and
-uploading/downloading E-book in PDF Format.Contributed towards the UI
-as well.<br />
-**Go through the Android Studio Project In Master Branch to know more.**
